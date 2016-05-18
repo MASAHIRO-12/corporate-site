@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
@@ -6,7 +6,6 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -19,27 +18,33 @@
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if(d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6";
+			js.src = "https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+		// .logo,h1 303.73x61 a 239x56 img 239x48
+		// .logo,h1 190x48 a 190x44 img 190x38.16
 	</script>
 	<header>
 		<div class="container">
-			<div class="six columns logo">
-				<h1><a href="index.html"><img class="u-max-full-width" src="images/top/logo.png" alt="株式会社サンプル" srcset="images/top/logo@2x.png 2x"></a></h1>
+			<div class="one-half column logo">
+				<h1><a href="index.html"><img class="u-max-full-width" src="images/top/logo.png" srcset="images/top/logo@2x.png 2x" alt="株式会社サンプル"></a></h1>
 			</div>
-			<nav class="six columns">
-				<img id="sp_nav_btn" class="u-max-full-width" src="images/top/sp_navi.png" alt="sp_nav" srcset="images/top/sp_navi@2x.png 2x">
-				<ul>
-					<li><a href="index.html" class="toppage">TOPページ</a></li>
-					<li><a href="news.html" class="news">ニュースリリース</a></li>
-					<li><a href="company.html" class="company">会社概要</a></li>
-				</ul>
-			</nav>
+			<div class="one-half column navi">
+				<nav>
+					<img id="sp_navi_btn" class="u-max-full-width" src="images/top/sp_navi.png" srcset="images/top/sp_navi@2x.png 2x" alt="sp_navi">
+					<ul>
+						<li><a href="index.html">TOPページ</a></li>
+						<li><a href="news.html">ニュースリリース</a></li>
+						<li><a href="company.html">会社概要</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</header>
 	<div id="sub_cover">
-		<h2>Company Info</h2>
+		<div class="container">
+			<h2>COMPANY INFO</h2>
+		</div>
 	</div>
 	<div id="contents">
 		<div class="container">
@@ -83,7 +88,7 @@
 				</table>
 			</main>
 			<aside class="three columns">
-				<div class="sidemenu">
+				<div class="pc_sidemenu">
 					<h3>Contents</h3>
 					<ul>
 						<li><a href="index.html">TOPページ</a></li>
@@ -91,34 +96,40 @@
 						<li><a href="company.html">会社概要</a></li>
 					</ul>
 				</div>
-				<div class="fb-page" data-href="https://www.facebook.com/facebook" data-height="300" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
+				<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+					<div class="fb-xfbml-parse-ignore">
+						<blockquote cite="https://www.facebook.com/facebook">
+							<a href="https://www.facebook.com/facebook">Facebook</a>
+						</blockquote>
+					</div>
+				</div>
 			</aside>
 		</div>
 	</div>
 	<footer>
 		<div class="container">
-			<div class="four columns sp">
-				<img class="u-max-full-width" src="images/top/footer_logo.png" alt="株式会社サンプル" srcset="images/top/footer_logo@2x.png 2x">
+			<div class="one-third column sp">
+				<img class="u-max-full-width" src="images/top/footer_logo.png" srcset="images/top/footer_logo@2x.png 2x" alt="株式会社サンプル">
 			</div>
-			<address class="four columns sp">
+			<div class="one-third column foot_address sp">
 				〒000-0000<br>東京都◯◯区◯◯町 560-0-0<br>03-0000-0000<br>info@xxxxxx.com
-			</address>
-			<nav class="four columns">
+			</div>
+			<div class="one-third column">
 				<ul>
 					<li><a href="index.html">TOPページ</a></li>
 					<li><a href="news.html">ニュースリリース</a></li>
 					<li><a href="company.html">会社概要</a></li>
 				</ul>
-			</nav>
+			</div>
 			<div class="twelve columns sp">
-				<p class="copy">&copy; 2010 Sample Inc.</p>
+				<p class="copy">copyright (C) SampleCompany all rights reserved.</p>
 			</div>
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>
 		$(function() {
-			$("#sp_nav_btn").click(function() {
+			$("#sp_navi_btn").click(function() {
 				$(this).next().slideToggle();
 			});
 		});
